@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            background-color: #351b56;
+            height: 100vh;
+            text-transform: capitalize;
+            width: 25%;
+        }
+
+        #container label {
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 1rem 0 0 1rem;
+            color: white;
+        }
+
+        input {
+            display: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FFE79B;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #351b56;
+            border-radius: 1rem;
+        }
+
+        .tab {
+            width: 75vw;
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: none;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        @keyframes appear {
+            from {
+                transform: translateY(200px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        .tab>* {
+            animation: appear 1s;
+            margin: 1rem 0 0 1rem;
+            padding-left: 1rem;
+        }
+
+        input:checked+.tab {
+            display: block;
+            background-color: #FFE79B;
+        }
+
+        #home:checked~label[for='home'] {
+            background-color: #4b2c73;
+            color: #FFE79B;
+            border-left: 4px solid #FFE79B;
+            font-weight: bolder;
+        }
+
+        #contact:checked~label[for='contact'] {
+            background-color: #4b2c73;
+            color: #FFE79B;
+            border-left: 4px solid #FFE79B;
+            font-weight: bolder;
+        }
+
+        #information:checked~label[for='information'] {
+            background-color: #4b2c73;
+            color: #FFE79B;
+            border-left: 4px solid #FFE79B;
+            font-weight: bolder;
+        }
+
+        #guide:checked~label[for='guide'] {
+            background-color: #4b2c73;
+            border-left: 4px solid #FFE79B;
+            font-weight: bolder;
+            color: #FFE79B;
+        }
+
+        h1 {
+            background-color: #351b56;
+            color: #FFE79B;
+            border-radius: 0.5rem 0 0 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <input type="radio" name="tab" id="home" checked>
+        <div class="tab">
+            <h1>home</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni fugiat ipsa animi quisquam porro
+                nostrum odio, quos reiciendis pariatur, ullam inventore placeat! Quibusdam, dignissimos velit.
+                Dignissimos culpa quae adipisci.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni fugiat ipsa animi quisquam porro
+                nostrum odio, quos reiciendis pariatur, ullam inventore placeat! Quibusdam, dignissimos velit.
+                Dignissimos culpa quae adipisci.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni fugiat ipsa animi quisquam porro
+                nostrum odio, quos reiciendis pariatur, ullam inventore placeat! Quibusdam, dignissimos velit.
+                Dignissimos culpa quae adipisci.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni fugiat ipsa animi quisquam porro
+                nostrum odio, quos reiciendis pariatur, ullam inventore placeat! Quibusdam, dignissimos velit.
+                Dignissimos culpa quae adipisci.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni fugiat ipsa animi quisquam porro
+                nostrum odio, quos reiciendis pariatur, ullam inventore placeat! Quibusdam, dignissimos velit.
+                Dignissimos culpa quae adipisci.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni fugiat ipsa animi quisquam porro
+                nostrum odio, quos reiciendis pariatur, ullam inventore placeat! Quibusdam, dignissimos velit.
+                Dignissimos culpa quae adipisci.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni fugiat ipsa animi quisquam porro
+                nostrum odio, quos reiciendis pariatur, ullam inventore placeat! Quibusdam, dignissimos velit.
+                Dignissimos culpa quae adipisci.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magni fugiat ipsa animi quisquam porro
+                nostrum odio, quos reiciendis pariatur, ullam inventore placeat! Quibusdam, dignissimos velit.
+                Dignissimos culpa quae adipisci.
+            </p>
+        </div>
+        <label for="home">
+            home
+        </label>
+        <input type="radio" name="tab" id="contact">
+        <div class="tab">
+            <h1>
+                contact
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis natus, a veritatis sed, nesciunt
+                delectus ducimus est iure, magnam nobis dolor. Sunt dignissimos excepturi id cumque possimus? Dolorem,
+                quibusdam laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, deleniti
+                obcaecati! Possimus autem accusamus officiis ex itaque nesciunt, exercitationem officia iste quae
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis natus, a veritatis sed, nesciunt
+                delectus ducimus est iure, magnam nobis dolor. Sunt dignissimos excepturi id cumque possimus? Dolorem,
+                quibusdam laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, deleniti
+                obcaecati! Possimus autem accusamus officiis ex itaque nesciunt, exercitationem officia iste quae
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis natus, a veritatis sed, nesciunt
+                delectus ducimus est iure, magnam nobis dolor. Sunt dignissimos excepturi id cumque possimus? Dolorem,
+                quibusdam laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, deleniti
+                obcaecati! Possimus autem accusamus officiis ex itaque nesciunt, exercitationem officia iste quae
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis natus, a veritatis sed, nesciunt
+                delectus ducimus est iure, magnam nobis dolor. Sunt dignissimos excepturi id cumque possimus? Dolorem,
+                quibusdam laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, deleniti
+                obcaecati! Possimus autem accusamus officiis ex itaque nesciunt, exercitationem officia iste quae
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis natus, a veritatis sed, nesciunt
+                delectus ducimus est iure, magnam nobis dolor. Sunt dignissimos excepturi id cumque possimus? Dolorem,
+                quibusdam laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, deleniti
+                obcaecati! Possimus autem accusamus officiis ex itaque nesciunt, exercitationem officia iste quae
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis natus, a veritatis sed, nesciunt
+                delectus ducimus est iure, magnam nobis dolor. Sunt dignissimos excepturi id cumque possimus? Dolorem,
+                quibusdam laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, deleniti
+                obcaecati! Possimus autem accusamus officiis ex itaque nesciunt, exercitationem officia iste quae
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis natus, a veritatis sed, nesciunt
+                delectus ducimus est iure, magnam nobis dolor. Sunt dignissimos excepturi id cumque possimus? Dolorem,
+                quibusdam laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, deleniti
+                obcaecati! Possimus autem accusamus officiis ex itaque nesciunt, exercitationem officia iste quae
+                cupiditate voluptas odio dolorum quaerat, expedita, impedit hic?</p>
+        </div>
+        <label for="contact">
+            contact
+        </label>
+        <input type="radio" name="tab" id="information">
+        <div class="tab">
+            <h1>
+                information
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, architecto? Natus quisquam distinctio
+                dolorem soluta voluptas aliquam accusamus. Nisi cum quaerat error laboriosam reiciendis impedit pariatur
+                voluptas neque numquam veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
+                eveniet aperiam mollitia repellendus accusantium voluptate iure praesentium. Iure ad repellendus facilis
+                ipsa nesciunt. Consequuntur eaque cumque ea, itaque dignissimos labore.
+            </p>
+        </div>
+        <label for="information">
+            information
+        </label>
+        <input type="radio" name="tab" id="guide">
+        <div class="tab">
+            <h1>
+                guide
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore sequi quas quos facere ipsam possimus
+                dolor error voluptatem vel cum, tenetur, sed nemo aliquam doloribus, nisi aut fugiat quisquam? Ea.</p>
+        </div>
+        <label for="guide">
+            guide
+        </label>
+    </div>
+</body>
+
+</html>
